@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="car.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:black">
+
+    <a-camera position="0 4 15"></a-camera>
+
+    <a-assets timeout="10000">
+      <a-asset-item id="car_model" src="scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-circle position="0 0 0" radius="19" color="purple" rotation="-90 0 0"></a-circle>
+
+    <a-entity id="car" car gltf-model="#car_model" position="0.37 0 6.43" rotation="0 90 0" scale="1 1 1" rotation="-90 0 0"></a-entity>
+
+  </a-scene>
+</body>
+
+</html>
